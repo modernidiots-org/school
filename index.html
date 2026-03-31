@@ -1,128 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>404 | Modern Idiots</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/svg+xml" href="/media/favicon.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Portal</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, Arial, sans-serif;
-      background: #111;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
+<link rel="icon" type="image/svg+xml" href="/media/favicon.svg">
 
-    header {
-      padding: 3rem 1.5rem 3rem 6.5rem;
-      text-align: center;
-      border-bottom: 1px solid #222;
-      position: relative;
-    }
+<style>
 
-    .logo {
-      position: absolute;
-      left: 1.5rem;
-      top: 1.5rem;
-      width: 256px;
-      height: auto;
-      border-radius: 6px;
-      display: block;
-    }
+:root{
+  --bg:#111;
+  --card:#181818;
+  --text:#f5f5f5;
+  --muted:#aaa;
+  --accent:#4da3ff;
+  --border:#222;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+body{
+  margin:0;
+  font-family:system-ui, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
 
-    header p {
-      margin-top: 0.5rem;
-      color: #aaa;
-    }
+/* HEADER */
 
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      text-align: center;
-    }
+header{
+  padding:2.5rem 1.5rem;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+}
 
-    .panda {
-      max-width: 260px;
-      width: 100%;
-      margin: 2rem auto;
-      display: block;
-    }
+header h1{
+  margin:0;
+  font-size:2.4rem;
+}
 
-    .nav-buttons {
-      margin-top: 1.5rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+header p{
+  margin-top:.5rem;
+  color:var(--muted);
+}
 
-    .nav-btn {
-      padding: 0.6rem 1.4rem;
-      border: 1px solid #f5f5f5;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border-radius: 6px;
-      color: #f5f5f5;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: all 0.2s ease;
-    }
+/* NAV */
 
-    .nav-btn:hover {
-      background: #f5f5f5;
-      color: #111;
-      border-color: #f5f5f5;
-    }
+.nav{
+  margin-top:1.5rem;
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  flex-wrap:wrap;
+}
 
-    footer {
-      text-align: center;
-      padding: 2rem 1.5rem;
-      border-top: 1px solid #222;
-      color: #777;
-      font-size: 0.9rem;
-    }
-  </style>
+.nav a{
+  padding:.5rem 1.2rem;
+  border:1px solid var(--border);
+  border-radius:6px;
+  text-decoration:none;
+  color:var(--text);
+  font-size:.9rem;
+  transition:.2s;
+}
+
+.nav a:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+/* MAIN */
+
+main{
+  max-width:1100px;
+  margin:3rem auto;
+  padding:0 1.5rem;
+}
+
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:1.5rem;
+}
+
+/* CLASS CARD */
+
+.class-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:1.5rem;
+  transition:.2s;
+}
+
+.class-card:hover{
+  border-color:var(--accent);
+  transform:translateY(-4px);
+}
+
+.class-card h2{
+  margin-top:0;
+  font-size:1.3rem;
+}
+
+.class-card p{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+/* FILE LIST */
+
+.file-list{
+  margin-top:1rem;
+}
+
+.file{
+  display:block;
+  padding:.5rem 0;
+  color:var(--accent);
+  text-decoration:none;
+  font-size:.9rem;
+}
+
+.file:hover{
+  text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:2rem;
+  border-top:1px solid var(--border);
+  color:#777;
+  font-size:.9rem;
+  margin-top:3rem;
+}
+
+</style>
 </head>
+
 <body>
 
-  <header>
-    <a href="/" aria-label="Modern Idiots home">
-      <img class="logo" src="/media/Modern-logo2.png" alt="Modern Idiots logo">
-    </a>
-    <h1>Modern Idiots</h1>
-    <p>404 error</p>
-  </header>
+<header>
+  <h1>School Portal</h1>
+  <p>Notes, lectures, and resources</p>
 
-  <main>
-    <h2>You are an idiot.</h2>
+  <div class="nav">
+    <a href="/">Main Site</a>
+    <a href="/ctf">CTF</a>
+    <a href="/resources">Resources</a>
+  </div>
+</header>
 
-    <img class="image" src="/media/pretty_monkey.jpeg" alt="The priettest monkey to ever exist">
+<main>
 
-    <p>
-      Think you can get past this pretty monkey?<br>
-      Think Again.<br>
-      This page does not exist! <br>
-      Maybe this monkey decided to obliterate it.
-    </p>
+<div class="grid">
 
-    <div class="nav-buttons">
-      <a href="/" class="nav-btn">Go Home</a>
-      <a href="/publications/confidenceiskey.html" class="nav-btn">Articles</a>
+  <!-- CLASS 1 -->
+  <div class="class-card">
+    <h2>Computer Science</h2>
+    <p>Networking, security, and programming notes</p>
+
+    <div class="file-list">
+      <a href="/files/cs/lesson1.pdf" class="file">Lesson 1 Notes</a>
+      <a href="/files/cs/lesson2.pdf" class="file">Lesson 2 Notes</a>
+      <a href="/files/cs/lecture.html" class="file">Lecture Slides</a>
     </div>
-  </main>
+  </div>
 
-  <footer>
-    © 2026 modernidiots.org<br>
-    You lost the game.
-  </footer>
+  <!-- CLASS 2 -->
+  <div class="class-card">
+    <h2>Math</h2>
+    <p>Formulas, homework help, and practice</p>
+
+    <div class="file-list">
+      <a href="/files/math/algebra.pdf" class="file">Algebra Notes</a>
+      <a href="/files/math/trig.pdf" class="file">Trig Review</a>
+    </div>
+  </div>
+
+  <!-- CLASS 3 -->
+  <div class="class-card">
+    <h2>CTF Training</h2>
+    <p>Challenges and cybersecurity practice</p>
+
+    <div class="file-list">
+      <a href="/ctf" class="file">Enter CTF</a>
+      <a href="/files/ctf/tools.pdf" class="file">Tools Guide</a>
+    </div>
+  </div>
+
+  <!-- ADD MORE CLASSES BELOW -->
+
+</div>
+
+</main>
+
+<footer>
+  © 2026 modernidiots.org<br>
+  Organized chaos, but educational
+</footer>
 
 </body>
 </html>
