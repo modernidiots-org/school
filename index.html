@@ -138,6 +138,48 @@ footer{
   margin-top:3rem;
 }
 
+  .class-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:1.5rem;
+  transition:.2s;
+
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+
+.class-card:hover{
+  border-color:var(--accent);
+  transform:translateY(-4px);
+}
+
+.class-content{
+  flex:1;
+}
+
+.class-image{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:8px;
+  border:1px solid var(--border);
+}
+
+/* Mobile fix */
+@media (max-width: 700px){
+  .class-card{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .class-image{
+    width:100%;
+    height:auto;
+  }
+}
+
 </style>
 </head>
 
@@ -159,6 +201,8 @@ footer{
 
   <!-- CLASS 1 -->
   <div class="class-card">
+
+  <div class="class-content">
     <h2>APUSH</h2>
     <p>History may be fake, but confidence will always be key</p>
     <p>All notecard PDF files are up to date with the current grading period.</p>
@@ -168,6 +212,14 @@ footer{
       <a href="/apush/files/nc/49wks/secondintalment.pdf" class="file">Second Installment</a>
     </div>
   </div>
+
+  <img 
+    src="apush/media/apush.jpg" 
+    alt="APUSH thumbnail"
+    class="class-image"
+  >
+
+</div>
 
   <!-- CLASS 2 
   <div class="class-card">
